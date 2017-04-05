@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,900"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 0;
+}
+ul {
+	padding: 0;
+	margin: 0;
+}
+.clearfix:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+/* Style the tab */
+#tab div.tab {
+    overflow: hidden;
+    border: 1px solid rgba(11,3,999,0.6);
+    background-color: #f1f1f1;
+}
+/* Style the buttons inside the tab */
+#tab div.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 0;
+  transition: all 1s;
+  font-size: 17px;
+  line-height: 1.2;
+  width: 20%;
+  color: #3255F4;
+  border-right: 1px solid #3255F4;
+}
+/* Change background color of buttons on hover */
+#tab div.tab button.active,
+#tab div.tab button:hover {
+	background-color: #fff;
+}
+/* Style the tab content */
+#tab .tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+.tab-bottom-section {
+  position: relative;
+  margin: 20px 0;
+}
+.tab-bottom-section input {
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 10px 10px 10px 60px;
+  box-sizing: border-box;
+}
+.tab-bottom-section::befor {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 36px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 5px 0 0 5px;
+}
+.tab-bottom-section .prn {
+	position: relative;
+}
+.tab-bottom-section .prn,
+.tab-bottom-section p {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tab-bottom-section p {
+    width: 150px;
+    text-align: center;
+}
+.tab-bottom-section .prn .fa.fa-user {
+    position: absolute;
+    font-size: 15px;
+    background: #000;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 4px 0 0 4px;
+    line-height: 1.2;
+}
+.section-holder {
+    border: 1px solid #999;
+    border-radius: 8px;
+    margin: 0 0 20px;
+    padding: 0 30px;
+}
+.input_section {
+    width: 50%;
+    float: left;
+    text-align: right;
+}
+.profile_section .tab-bottom-section {
+	margin: -15px 0 0 70px;
+}
+.profile_section {
+	width: 50%;
+	float: right;
+}
+.tab-bottom-section .pr,
+.profile p {
+    margin: 0 0 10px;
+    display: block;
+    background: rgba(0,0,0,0.2);
+    color: #3255F4;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.tab-bottom-section a {
+    display: block;
+    text-align: center;
+    margin: 10px auto 0;
+    text-decoration: none;
+    width: 120px;
+    background: #000;
+    color: #fff;
+    padding: 13px 17px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.tab-bottom-section a {
+    display: block;
+    text-align: center;
+    margin: 10px 0 0 360px;
+    text-decoration: none;
+    width: 120px;
+    background: #000;
+    color: #fff;
+    padding: 13px 17px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+#tab #London {
+    display: block;
+}
+.left-btn,
+.right-btn {
+    display: inline-block;
+    vertical-align: top;
+}
+.left-btn a,
+.right-btn a {
+	display: block;
+}
+.btn-fld {
+	margin: 0 0 30px;
+    text-align: center;
+}
+.btn-fld a {
+    text-align: center;
+    padding: 11px 25px;
+    background: #fff;
+    color: #999;
+    text-decoration: none;
+    margin: 0 11px;
+    border: 1px solid gray;
+}
+.btn-fld p {
+	color: #999;
+}
+.tab-bottom-section .pr {
+	margin: 10px 0 0;
+}
+.tab-bottom-section .pr,
+.left-icon {
+    display: inline-block;
+    vertical-align: top;
+}
+.input-bottom {
+	margin: 15px 0;
+}
+.left-icon span {
+	color: gray;
+	font-size: 18px;
+	line-height: 1.2;
+    margin: -44px 15px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.left-icon p {
+	color: gray;
+	font-size: 18px;
+	line-height: 1.2;
+}
+.left-icon .pa {
+	margin: 0 0 0 50px;
+    background: rgb(146, 211, 110);
+    padding: 12px 130px;
+    color: #fff;
+	font-size: 18px;
+	line-height: 1.2;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.input-bottom .py {
+    display: block;
+    width: auto;
+    text-align: left;
+    color: rgb(192, 192, 192);
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.payments_heading h4 {
+    text-align: center;
+}
+.payments_input_section .prn.larg {
+    float: left;
+    width: 60%;
+}
+.payments_input_section .prn.small {
+	float: right;
+	width: 30%;
+}
+.prn.larg_m {
+    width: 100%;
+    margin: 15px 0;
+}
+.payments_listing_block ul li {
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.2;
+    border-top: 1px solid #999;
+    padding: 8px 18px;
+    box-sizing: border-box;
+    border-left: 1px solid #999;
+}
+.payments_listing_block ul:last-child li {
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+.payments_listing_block ul li:first-child {
+	width: 80%;
+	text-align: right;
+	background: rgb(204, 204, 204);
+}
+.payments_listing_block ul li:first-child span {
+    max-width: 250px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+.payments_listing_block ul li:last-child {
+	width: 20%;
+    border-right: 1px solid rgb(204, 204, 204);
+    text-align: right;
+}
+.payments_listing_block ul:first-child li:first-child{
+    border-radius: 5px 0 0 0;
+}
+.payments_listing_block ul:first-child li:last-child {
+    border-radius: 0 5px 0 0;
+}
+.payments_listing_block ul:last-child li:first-child {
+    border-radius: 0 0 0 5px;
+}
+.payments_listing_block ul:last-child li:last-child {
+    border-radius: 0 0 5px 0;
+}
+.payments_listing_block ul {
+	padding: 0;
+	font-size: 0;
+}
+.payments_listing_block {
+    margin: 0 0 10px;
+}
+.play_btn a {
+	color: rgb(146, 146, 146);
+    float: right;
+    background: rgb(201, 241, 253);
+    font-size: 18px;
+    line-height: 1.2;
+}
+.col1 {
+	width: 50px;
+	text-align: center;
+}
+.col3,
+.col4,
+.col6 {
+    width: 110px;
+    text-align: center;
+}
+.col5 {
+	width: 280px;
+	text-align: center;
+}
+.col2,
+.col7{
+	width: 175px;
+	text-align: center;
+}
+.tab-bottom-section .block {
+    border: 1px solid gray;
+}
+.block-row ul {
+	font-size: 0;
+}
+.block-row ul li {
+    display: inline-block;
+    vertical-align: top;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    font-size: 13px;
+    line-height: 25px;
+    padding: 26px 0;
+}
+.block-row:last-child ul li {
+    border-bottom: 0;
+}
+.block-row ul li:first-child {
+    border-left: 0;
+    padding: 26px 0;
+}
+.prn.unselectable {
+	margin: 0 0 20px;
+}
+.block-row.first {
+	background: #A8C6FA;
+}
+.block-row.ther {
+	background: #ECECEC;
+}
+.colum1 {
+    width: 70px;
+}
+.colum2,
+.colum5,
+.colum6 {
+    width: 180px;
+}
+.colum3 {
+    width: 300px;
+}
+.colum4 {
+    width: 100px;
+}
+.colum1,
+.colum2,
+.colum3,
+.colum4,
+.colum5,
+.colum6 {
+	font-size: 20px;
+	line-height: 1.2;
+	text-align: center;
+}
+.tab-bottom-section .dcmt {
+	margin: 0 0 60px;
+}
+.dcmt_img img {
+    width: 100%;
+}
+.block-row .fa.fa-user {
+	font-size: 20px;
+}
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div id="tab">
+				<div class="tab">
+					<button class="tablinks active" onclick="openCity(event, 'London')">General settings</button>
+					<button class="tablinks" onclick="openCity(event, 'Paris')">Payments &amp; invoices</button>
+					<button class="tablinks" onclick="openCity(event, 'Tokyo')">Channels</button>
+					<button class="tablinks" onclick="openCity(event, 'User')">Users</button>
+					<button class="tablinks" onclick="openCity(event, 'Referrals')">Referrals</button>
+				</div>
+				<div id="London" class="tabcontent">
+					<div class="main-block clearfix">
+						<div class="section-holder">
+							<div class="tab-bottom-section">
+								<div class="prn">
+									<i class="fa fa-user" aria-hidden="true"></i>
+									<input type="text" placeholder="Email">
+								</div>	
+							</div>
+							<div class="input_profile_section clearfix">
+								<div class="input_section">
+									<div class="tab-bottom-section">
+										<p>First Name</p>
+										<div class="prn">
+											<i class="fa fa-user" aria-hidden="true"></i>
+											<input type="text" placeholder="Email">
+										</div>	
+									</div>
+									<div class="tab-bottom-section">
+										<p>Second Name</p>
+										<div class="prn">
+											<i class="fa fa-user" aria-hidden="true"></i>
+											<input type="text" placeholder="Email">
+										</div>	
+									</div>
+									<div class="tab-bottom-section">
+										<p>Email Address</p>
+										<div class="prn">
+											<i class="fa fa-user" aria-hidden="true"></i>
+											<input type="text" placeholder="Email">
+										</div>	
+									</div>
+									<div class="tab-bottom-section">
+										<p>Change Password</p>
+										<div class="prn">
+											<i class="fa fa-user" aria-hidden="true"></i>
+											<input type="text" placeholder="Email">
+										</div>
+										<div class="btn">
+											<a href="#">Chang Password</a>
+										</div>
+									</div>
+								</div>
+								<div class="profile_section">
+									<div class="tab-bottom-section profile">
+										<p>Change Password</p>
+										<div class="prn">
+											<img src="img/profile.png">
+										</div>	
+									</div>
+								</div>
+							</div>
+							<div class="btn-fld">
+								<div class="left-btn">
+									<a href="#">Time Zone Auto Detect GMT 12:00pm</a>
+									<p>Timezone</p>
+								</div>
+								<div class="right-btn">
+									<a href="#">Preferred Language</a>
+									<p>Proferred Language</p>
+								</div>
+							</div>
+						</div>
+						<div class="section-holder clearfix">
+							<div class="tab-bottom-section">
+								<div class="prn">
+									<i class="fa fa-user" aria-hidden="true"></i>
+									<input type="text" placeholder="Email">
+								</div>	
+							</div>
+							<div class="input_section">
+								<div class="tab-bottom-section">
+									<p>First Name</p>
+									<div class="prn">
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<input type="text" placeholder="Email">
+									</div>	
+								</div>
+								<div class="tab-bottom-section">
+									<p>Second Name</p>
+									<div class="prn">
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<input type="text" placeholder="Email">
+									</div>	
+								</div>
+								<div class="tab-bottom-section">
+									<p>Email Address</p>
+									<div class="prn">
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<input type="text" placeholder="Email">
+									</div>	
+								</div>
+								<div class="tab-bottom-section">
+									<p>Change Password</p>
+									<div class="prn">
+										<i class="fa fa-user" aria-hidden="true"></i>
+										<input type="text" placeholder="Email">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section-holder clearfix">
+							<div class="tab-bottom-section">
+								<div class="prn">
+									<i class="fa fa-user" aria-hidden="true"></i>
+									<input type="text" placeholder="Email">
+								</div>
+								<div class="input-bottom">
+									<div class="left-icon">
+										<img src="img/icon.png">
+										<span>Uplode New Logo</span>
+									</div>
+									<p class="pr">Change Password</p>
+								</div>
+							</div>
+						</div>
+						<div class="section-holder clearfix">
+							<div class="tab-bottom-section">
+								<div class="prn">
+									<i class="fa fa-user" aria-hidden="true"></i>
+									<input type="text" placeholder="Email">
+								</div>
+								<div class="input-bottom">
+									<p class="py">Weekly time constraints. This conditions are used to calculate business hour SLA</p>
+									<div class="left-icon">
+										<p>Open Between</p>
+										<p class="pa">Change Password</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="Paris" class="tabcontent">
+					<div class="payments_invoices_main_bolck">
+						<div class="section-holder">
+							<div class="tab-bottom-section">
+								<div class="prn">
+									<i class="fa fa-user" aria-hidden="true"></i>
+									<input type="text" placeholder="Email">
+								</div>
+								<div class="payments_invoices">
+									<div class="payments_top_inner_section">
+										<div class="payments_heading">
+											<h4>payments_top_inner_section</h4>
+										</div>
+										<div class="payments_input_section clearfix">
+											<div class="prn larg">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<input type="text" placeholder="Email">
+											</div>
+											<div class="prn small">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<input type="text" placeholder="Email">
+											</div>
+											<div class="prn larg_m">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<input type="text" placeholder="Email">
+											</div>
+											<div class="payments_listing_block">
+												<ul>
+													<li><span>Total Cost*</span></li>
+													<li>£49.99</li>
+												</ul>
+												<ul>
+													<li><span>Discount</span></li>
+													<li>£0.00</li>
+												</ul>
+												<ul>
+													<li><span>Total Recurring Cost</span></li>
+													<li>£49.99</li>
+												</ul>
+											</div>
+											<div class="play_btn">
+												<a href="#">Play Now</a>
+											</div>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section-holder">
+							<div class="tab-bottom-section">
+								<div class="prn unselectable">
+									<i class="fa fa-user" aria-hidden="true"></i>
+									<input type="text" placeholder="Email">
+								</div>
+								<div class="block">
+									<div class="block-row first">
+										<ul>
+											<li class="col1">
+												<form action="/action_page.php" method="get">
+													<input type="checkbox" name="vehicle" value="Bike">
+												</form>
+											</li>
+											<li class="col2">col</li>
+											<li class="col3">col</li>
+											<li class="col4">col</li>
+											<li class="col5">col</li>
+											<li class="col6">col</li>
+											<li class="col7">col</li>
+										</ul>
+									</div>
+									<div class="block-row">
+										<ul>
+											<li class="col1">
+												<form action="/action_page.php" method="get">
+													<input type="checkbox" name="vehicle" value="Bike">
+												</form>
+											</li>
+											<li class="col2">col</li>
+											<li class="col3">col</li>
+											<li class="col4">col</li>
+											<li class="col5">col</li>
+											<li class="col6">col</li>
+											<li class="col7">col</li>
+										</ul>
+									</div>
+									<div class="block-row ther">
+										<ul>
+											<li class="col1">
+												<form action="/action_page.php" method="get">
+													<input type="checkbox" name="vehicle" value="Bike">
+												</form>
+											</li>
+											<li class="col2">col</li>
+											<li class="col3">col</li>
+											<li class="col4">col</li>
+											<li class="col5">col</li>
+											<li class="col6">col</li>
+											<li class="col7">col</li>
+										</ul>
+									</div>
+									<div class="block-row">
+										<ul>
+											<li class="col1">
+												<form action="/action_page.php" method="get">
+													<input type="checkbox" name="vehicle" value="Bike">
+												</form>
+											</li>
+											<li class="col2">col</li>
+											<li class="col3">col</li>
+											<li class="col4">col</li>
+											<li class="col5">col</li>
+											<li class="col6">col</li>
+											<li class="col7">col</li>
+										</ul>
+									</div>
+								</div>	
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div id="Tokyo" class="tabcontent">
+					<h3>Tokyo	</h3>
+					<p>Tokyo is the capital of Japan.</p>
+				</div>
+				<div id="User" class="tabcontent">
+					<div class="section-holder">
+						<div class="tab-bottom-section">
+							<div class="block dcmt">
+								<div class="block-row first">
+									<ul>
+										<li class="colum1">Icon</li>
+										<li class="colum2">Name</li>
+										<li class="colum3">e-mail</li>
+										<li class="colum4">CRM Active</li>
+										<li class="colum5">Enabled Channels</li>
+										<li class="colum6">Reset Password</li>
+									</ul>
+								</div>
+								<div class="block-row">
+									<ul>
+										<li class="colum1">
+											<i class="fa fa-user" aria-hidden="true"></i>
+										</li>
+										<li class="colum2">col</li>
+										<li class="colum3">col</li>
+										<li class="colum4">
+											<form action="/action_page.php" method="get">
+												<input type="checkbox" name="vehicle" value="Bike">
+											</form>
+										</li>
+										<li class="colum5">col</li>
+										<li class="colum6">col</li>
+									</ul>
+								</div>
+								<div class="block-row ther">
+									<ul>
+										<li class="colum1">
+											<i class="fa fa-user" aria-hidden="true"></i>
+										</li>
+										<li class="colum2">col</li>
+										<li class="colum3">col</li>
+										<li class="colum4">
+											<form action="/action_page.php" method="get">
+												<input type="checkbox" name="vehicle" value="Bike">
+											</form>
+										</li>
+										<li class="colum5">col</li>
+										<li class="colum6">col</li>
+									</ul>
+								</div>
+								<div class="block-row">
+									<ul>
+										<li class="colum1">
+											<i class="fa fa-user" aria-hidden="true"></i>
+										</li>
+										<li class="colum2">col</li>
+										<li class="colum3">col</li>
+										<li class="colum4">
+											<form action="/action_page.php" method="get">
+												<input type="checkbox" name="vehicle" value="Bike">
+											</form>
+										</li>
+										<li class="colum5">col</li>
+										<li class="colum6">col</li>
+									</ul>
+								</div>
+							</div>
+							<div class="dcmt_img">
+								<img src="img/img.png">
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div id="Referrals" class="tabcontent">
+					<h3>Tokyo	</h3>
+					<p>Tokyo is the capital of Japan.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+function openCity(evt, cityName) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(cityName).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+</script>
+		 
+</body>
+</html> 
