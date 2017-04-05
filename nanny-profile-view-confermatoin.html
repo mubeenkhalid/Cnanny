@@ -1,0 +1,395 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!-- Place favicon.ico in the root directory -->
+
+	<link rel="stylesheet" href="css/normalize.css">
+
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<div class="wrapper" id="page-dashboard">
+
+	<div class="inner-header">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+								data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html"><img src="img/inner-logo.png"/></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="parent-messages.html">Messages</a><a href="#." class="no-">3</a></li>
+							<li><a href="parent-my-nannies.html">My cNannies</a></li>
+							<li><a href="how-it-works.html">How it works</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle drop-user" data-toggle="dropdown" role="button"
+								   aria-haspopup="true" aria-expanded="false">Hello, User <img class="profile-img"
+																							   src="img/u1058.png"/>
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="parent-dashboard.html">Dashboard</a></li>
+									<li><a href="parent-profile.html">Profile</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="login.html">Logout</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	</div>
+	<div class="search-confirmation">
+        <div class="haeder-bottom-section clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="haeder-bottom-p">
+                                <p class="dnd">Your edits have been saved</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="haeder-bottom-btn">
+                                <i class="fa fa-close"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="search-container">
+        <div class="haeder-bottom-section clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="haeder-bottom-p">
+                                <p>You are viewing your profile as a parent would see it</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="haeder-bottom-btn">
+                                <a href="#">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<img src="img/u4851.png" class="p-img" />
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<h4 class="view-name">Florence W.</h4>
+				<p class="bullet-point"><img src="img/u3012.png" /> Background check <a href="#." data-toggle="modal" data-target="#myModal"></a> </p>
+				<p class="bullet-point"><img src="img/u3012.png" /> Driving record check <a href="#." data-toggle="modal" data-target="#myModal"></a> </p>
+				<p class="bullet-point"><img src="img/u3012.png" /> First aid and CPR certificate <a href="#." data-toggle="modal" data-target="#myModal"></a> </p>
+				<p class="bullet-point"><img src="img/u3012.png" /> Emotional intelligence and knowledge assessment <a href="#." data-toggle="modal" data-target="#myModal"></a></p>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+			 <a href="#." class="btn green-btn btn-block btn-lg margin-top20" data-toggle="modal" data-target="#interview">Schedule an Interview</a>
+			 <a href="#." class="btn green-bordered-btn btn-block btn-lg" data-toggle="modal" data-target="#offer">Added to favorites</a>
+				<a href="#." class="btn green-bordered-btn btn-block btn-lg">Add to maybes</a>
+				<a href="parent-messages.html" class="btn green-bordered-btn btn-block btn-lg">Message</a>
+			</div>
+		</div>
+	</div>
+	<!-- Modal schedule interview -->
+	<div id="interview" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Schedule an Interview with Florence</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label>How would you like to interview Florence?</label>
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<label><input type="radio"> In person</label> &nbsp;
+								<label><input type="radio"> By telephone</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Would you like to propose some interview times to Florence?</label>
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<label><input type="radio"> Yes</label> &nbsp;
+								<label><input type="radio"> No - Ask Florence to suggest a time</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Notes <small>(Optional)</small></label><br>
+						<small>Anything else you would like to say to Florence?</small>
+						<textarea class="form-control"></textarea>
+					</div>
+					<div>
+						<a href="#." class="btn green-btn btn-lg">Send Request</a> <a href="#." class="btn green-bordered-btn btn-lg">Preview Request</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Modal Header</h4>
+				</div>
+				<div class="modal-body">
+					<p>Some text in the modal.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="offer" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<h2 class="sofia purpal-text">Make an Offer</h2>
+					</div>
+					<div class="col-md-8 col-sm-8 col-xs-12">
+						<div class="row">
+							<div class="col-md-3 col-sm-6 col-xs-12">
+								<img src="img/u4851.png" class="p-img">
+							</div>
+							<div class="col-md-9 col-sm-6 col-xs-12">
+								<h4 class="view-name">Florence W.</h4>
+								<p class="bullet-point"><img src="img/u3012.png"> First aid and CPR certificate <a href="#." data-toggle="modal" data-target="#myModal"><img src="img/u4875.png"> </a> </p>
+								<p class="bullet-point"><img src="img/u3012.png"> Emotional intelligence and knowledge assessment <a href="#." data-toggle="modal" data-target="#myModal"><img src="img/u4875.png"> </a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<p>Based on comparable salaries for nannies in the area with Florence skills, a fair market salary is between:</p>
+				<p><strong>$535</strong> and <strong>$738</strong> per week</p>
+				<br><br>
+				<div class="row">
+					<div class="col-md-6">
+<p>Your salary offer to Florence</p>
+					<div class="row">   <div class="col-md-8"> <input type="text"  value="$" class="form-control"> </div><p>Per week</p></div>
+					</div>
+				</div>
+				<br>
+				<p>Earned paid leave (optional)</p>
+				<small>Sweeten the deal by offering Eileen earned paid leave</small>
+				<div class="row">
+					<div class="col-md-4">
+						<select class="form-control">
+							<option value="0">0</option>
+							<option value="0.5">0.5</option>
+							<option value="1">1</option>
+							<option value="1.5">1.5</option>
+							<option value="2">2</option>
+							<option value="2.5">2.5</option>
+						</select>
+					</div>
+					<p>Days per month</p>
+				</div>
+				<br>
+				<p>You will be charged a $1000 booking fee when the offer is accepted.</p>
+				<br>
+				<input type="button" class="btn green-btn btn-lg" value="Make Offer"> <a href="#." class="text-black text-underline">Cancel</a>
+			</div>
+
+		</div>
+	</div>
+	<div class="green-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="white-bg radial-box pad20-mar20">
+						<div class="section-head">
+							Availability
+						</div>
+						<p> Prefers: Full-time
+						</p>
+						<p>Will do: Part-time AM</p>
+						<div class="section-head">
+							Location
+						</div>
+						<p> Reston, 5 miles from you
+						</p>
+						<p>Will work up to 25 miles from home</p>
+					</div>
+					<div class="white-bg radial-box pad20-mar20">
+						<div class="section-head">
+							Special Needs Care
+						</div>
+						<p> Florence can has experience caring for the following special needs:
+						</p>
+						<ul style="list-style: inside">
+							<li>Hearing</li>
+							<li>Visual</li>
+							<li>Learning</li>
+							<li>Physical</li>
+							<li>Social and/or Emotional</li>
+							<li>Special Dietary</li>
+						</ul>
+						<div class="section-head">
+							Location
+						</div>
+						<p> Reston, 5 miles from you
+						</p>
+						<p>Will work up to 25 miles from home</p>
+					</div>
+					<div class="white-bg radial-box pad20-mar20">
+						<div class="section-head">
+							Languages
+						</div>
+						<p> Fluent English and Spanish
+						</p>
+						<div class="section-head">
+							Certificates
+						</div>
+						<p>Florence has a verified certificate in childcare
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="white-bg radial-box pad20-mar20">
+						<div class="section-head">
+							Experience
+						</div>
+						<p> 20 years experience working with infants
+						</p>
+						<p>18 years experience working with toddlers</p>
+						<div class="section-head">
+							Age
+						</div>
+						<p>65 years old
+						</p>
+					</div>
+
+					<div class="white-bg radial-box pad20-mar20">
+						<div class="section-head">
+							Additional Services
+						</div>
+						<p> Florence can also help you with:
+						</p>
+						<p>18 years experience working with toddlers</p>
+						<p class="nanny-action recently"><img src="img/cooking_icon_u4956.png"/> Meal preparation
+						</p>
+						<p class="nanny-action recently"><img src="img/housekeeping_icon_u4945.png"/> Light housekeeping
+						</p>
+						<p class="nanny-action recently"><img src="img/laundry_icon_u4954.png"/> Laundry
+						</p>
+						<p class="nanny-action recently"><img src="img/grocery_icon_u4943.png"/> Grocery shopping/errands
+						</p>
+						<p class="nanny-action recently"><img src="img/driving_icon_u4958.png"/> Driving
+						</p>
+						<p class="nanny-action recently"><img src="img/baby_massage_icon_u4947.png"/> Baby massage
+						</p>
+						<p class="nanny-action recently"><img src="img/u4950.png"/><img src="img/u4950.png"/> Caring for twins/multiples
+						</p>
+					</div>
+
+					<div class="white-bg radial-box pad20-mar20">
+						<div class="section-head">
+							Transportation
+						</div>
+						<p class="nanny-action recently"><img src="img/car_icon_u4587.png"/> Florence has her own transportation
+						</p>
+						<div class="section-head">
+							Dogs
+						</div>
+						<p class="nanny-action recently"><img src="img/dog_icon_u4594.png"/> Florence is comfortable around dogs
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<a href="#." class="footer-logo">
+							<img src="img/footer-logo.png"/>
+						</a>
+						<div class="">
+							<a href="#."> cNanny</a> copyright &nbsp;&nbsp;&copy; 2017
+						</div>
+					</div>
+					<div class="col-md-6 text-right col-sm-6 col-xs-12">
+						<div class="footer-socials">
+							<a href="#." target="_blank"><i class="fa fa-facebook"></i></a>
+							<a href="#." target="_blank"><i class="fa fa-twitter"></i></a>
+							<a href="#." target="_blank"><i class="fa fa-linkedin"></i></a>
+						</div>
+
+						<small>
+							<a href="terms.html">
+								Terms and conditions
+							</a>
+						</small>
+						<small>
+							<a href="policy.html">
+								Privacy Policy
+							</a>
+						</small>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+</body>
+</html>
